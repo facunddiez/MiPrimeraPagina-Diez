@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    
+   <h2>Agregar un Autor</h2>
+
+   <form method="post">
+        {% csrf_token %}
+        {{ form }}
+   </form>
+
+    <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 
+
+{% endblock content %}

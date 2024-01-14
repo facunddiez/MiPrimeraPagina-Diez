@@ -1,4 +1,5 @@
 {% extends "core/base.html" %}
+
 {% block content %}
     <h1>Posts</h1>
     <ul> 
@@ -14,6 +15,8 @@
 
     </ul>
     <button> <a href="{% url 'blog:post_list' %}"> Listar Posts </a> </button> 
+    <button> <a href="{% url 'blog:autores_list' %}"> Listar Autores </a> </button> 
+    <button> <a href="{% url 'blog:autores_add' %}"> Agregar Nuevo Autor </a> </button> 
     <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 
 
 {% endblock content %}
