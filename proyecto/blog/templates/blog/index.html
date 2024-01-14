@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-</head>
-<body>
+{% extends "core/base.html" %}
+{% block content %}
     <h1>Posts</h1>
     <ul> 
         {% for post in posts %}
@@ -21,5 +15,5 @@
     </ul>
     <button> <a href="{% url 'blog:post_list' %}"> Listar Posts </a> </button> 
     <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 
-</body>
-</html>
+
+{% endblock content %}
