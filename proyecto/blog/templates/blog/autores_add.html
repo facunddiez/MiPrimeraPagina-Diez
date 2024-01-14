@@ -7,6 +7,7 @@
    <form method="post">
         {% csrf_token %}
         {{ form }}
+        <button type="submit">Agregar</button>
    </form>
 
     <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 
