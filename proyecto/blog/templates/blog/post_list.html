@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Blog</title>
+</head>
+<body>
+   <h1> Proyecto Blog </h1>
+   <h2>Lista de Posts</h2>
+   <table border="1">
+    <thead>
+        <th> autor </th>
+        <th> Titulo </th>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+            <tr>
+                <td> {{ post.autor }} </td>
+                <td> {{ post.titulo }} <td>
+            </tr>
+        {% endfor %}
+    </tbody>
+   </table>
+    <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 
+</body>
+</html>
