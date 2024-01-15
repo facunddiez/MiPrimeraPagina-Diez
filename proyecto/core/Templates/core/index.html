@@ -9,7 +9,8 @@
     <h1> Proyecto Blog </h1>
     <h2>Pagina principal</h2>
     <button> <a href="{% url 'blog:index' %}"> Ir a Posts </a> </button> 
-    <button> <a href="{% url 'blog:index' %}"> Ir a Autores </a> </button> 
+    <button> <a href="{% url 'blog:autores' %}"> Ir a Autores </a> </button>
+    <button> <a href="{% url 'blog:comentarios' %}"> Ir a Comentarios </a> </button>  
     <button> <a href="{% url 'admin:index' %}"> Administracion </a> </button> 
  
  {% endblock content %}
