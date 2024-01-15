@@ -12,12 +12,12 @@
         <th> Fecha de comentario </th>
     </thead>
     <tbody>
-        {% for comment in comments %}
+        {% for comentario in comentarios %}
             <tr>
-                <td> {{ comment.post }} </td>
-                <td> {{ comment.autor }} </td>
-                <td> {{ comment.contenido }} </td>
-                <td> {{ comment.fecha_comentario }} </td>
+                <td> {{ comentario.post }} </td>
+                <td> {{ comentario.autor }} </td>
+                <td> {{ comentario.contenido }} </td>
+                <td> {{ comentario.fecha_comentario }} </td>
             </tr>
         {% endfor %}
     </tbody>
