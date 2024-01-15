@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import models
 from . import forms
 
@@ -17,6 +17,12 @@ def autores_list(request):
     return render(request, "blog/autores_list.html", contexto)
 
 def autores_add(request):
-    if request.method == "GET":
+    if request.method == "POST":
+        form = forms.AutorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("blog:autores_list")
+    else:
         form = forms.AutorForm
-        return render(request, "blog/autores_add.html", {"form": form})
+    return render(request, "blog/autores_add.html", {"form": form})
+    
