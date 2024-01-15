@@ -2,15 +2,7 @@
 
 {% block content %}
     <h1>Comentarios</h1>
-    <ul> 
-        {% for comentario in comentarios %}
-            <h2> Comentarios </h2>
-      
-
-        {% endfor %}
-
-
-    </ul>
+    
     <button> <a href="{% url 'blog:comentarios_list' %}"> Listar Comentarios </a> </button> 
     <button> <a href="{% url 'blog:comentarios_add' %}"> Agregar Nuevo Comentario </a> </button> 
     <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 

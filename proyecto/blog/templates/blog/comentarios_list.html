@@ -1,18 +1,23 @@
 {% extends "core/base.html" %}
+
 {% block content %}
+
+
    <h2>Lista de Comentarios</h2>
    <table border="1">
     <thead>
         <th> Autor </th>
+        <th> Post </th>
         <th> Comentario </th>
+        <th> Fecha de comentario </th>
     </thead>
     <tbody>
-        {% for comentario in comentarios %}
+        {% for comment in comments %}
             <tr>
-                <td> {{ comentario.post }} </td>
-                <td> {{ comentario.autor }} </td>
-                <td> {{ comentario.contenido }} </td>
-                <td> {{ comentario.fecha_publicacion }} </td>
+                <td> {{ comment.post }} </td>
+                <td> {{ comment.autor }} </td>
+                <td> {{ comment.contenido }} </td>
+                <td> {{ comment.fecha_comentario }} </td>
             </tr>
         {% endfor %}
     </tbody>

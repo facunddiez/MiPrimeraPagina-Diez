@@ -12,6 +12,10 @@ def autores(request):
 def comentarios(request):
     return render(request, "blog/comentarios.html")
 
+def comentarios_list(request):
+    comentario = models.Comentario.objects.all()
+    contexto = {"comentario": comentario}
+    return render(request, "blog/comentarios_list.html", contexto)
 
 def post_list(request):
     posts = models.Post.objects.all()
@@ -43,11 +47,6 @@ def post_add(request):
         form = forms.PostForm
     return render(request, "blog/post_add.html", {"form": form})
 
-def comentarios_list(request):
-    comentario = models.Comentario.objects.all()
-    contexto = {"comentario": comentario}
-    return render(request, "blog/comentarios_list.html", contexto)
-
 def comentarios_add(request):
     if request.method == "POST":
         form = forms.ComentarioForm(request.POST)
@@ -57,3 +56,5 @@ def comentarios_add(request):
     else:
         form = forms.ComentarioForm
     return render(request, "blog/comentarios_add.html", {"form": form})
+
+

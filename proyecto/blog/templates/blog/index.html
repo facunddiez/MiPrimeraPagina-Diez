@@ -2,18 +2,10 @@
 
 {% block content %}
     <h1>Posts</h1>
-    <ul> 
-        {% for post in posts %}
-            <h2> Post </h2>
-            <li> {{ post.titulo }} <li>
-            <li> {{ post.contenido }} <li>
-            <li> {{ post.autor }} <li>
-            <li> {{ post.fecha_publicacion }} <li>
-
-        {% endfor %}
+    
 
 
-    </ul>
+ 
     <button> <a href="{% url 'blog:post_list' %}"> Listar Posts </a> </button> 
     <button> <a href="{% url 'blog:post_add' %}"> Agregar Nuevo Post </a> </button> 
     <button> <a href="{% url 'core:index' %}"> Ir a Pagina Principal </a> </button> 

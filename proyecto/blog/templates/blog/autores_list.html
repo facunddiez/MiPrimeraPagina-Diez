@@ -7,13 +7,15 @@
    <table border="1">
     <thead>
         <th> Nombre </th>
+        <th>Biografia</th>
         <th> Email </th>
     </thead>
     <tbody>
         {% for autor in autores %}
             <tr>
                 <td> {{ autor.nombre }} </td>
-                <td> {{ autor.email }} <td>
+                <td> {{ autor.bio }} </td>
+                <td> {{ autor.email }} </td>
             </tr>
         {% endfor %}
     </tbody>
