@@ -34,3 +34,4 @@ El gitignore consiste de un archivo en donde se adjunta los archivos que se quie
 Ademas, se configuro la funcion de un SuperUser, que vendria a tomar el rol de administrador, que posee la capacidad de acceder a la base de datos completa, agregar y borrar entradas en una seccion especial para este mismo. 
 
 Ademas, se ha creado un archivo base html, con el proposito de llevar a cabo la herencia de plantillas. En esta se coloca el formato base de todas las html, las cuales llevan una linea de codigo que determina la extension de la base en la primera linea de cada uno de estos archivos.
+Para crear un nuevo Post siendo un autor no registrado hay que previamente registrarse en la seccion de autores
